@@ -3,20 +3,6 @@
 Write a program that prints out a multiplication table of the first 10 prime numbers.
 The program must run from the command line and print to screen one table.
 Across the top and down the left side should be the 10 primes, and the body of the table should contain the product of multiplying these numbers.
-An example of the way the program may run:
-
-```
-<program_name> ­­count 10
-```
-
-Notes:
-- Consider code readability/complexity
-- Consider cases where we want more than ‘n’ primes
-- Consider KISS and not over­engineering
-- Consider re­usability
-- Write your own implementation for generating prime numbers (DO NOT use a library)
-- Write tests
-- Write it in Ruby
 
 ### Usage
 
@@ -38,19 +24,12 @@ Primetable displays 10 elements by default.
  29  |  58  87 145 203 319 377 493 551 667 841
 ```
 
-You can specify the desirect count of rows/columns to use with the -c (--count) switch:
+You can specify the desirect count of rows/columns to use with the -c (--count) switch
 
-```
-% ./bin/primetable -c 3
-
-   |  2  3  5
----+---------
- 2 |  4  6 10
- 3 |  6  9 15
- 5 | 10 15 25
-```
-
-### Tests
+### Development
 
 Install the development & test dependencies with `bundle install` then simply run `rspec`.
-This program has been built using Ruby 2.2.2.
+
+### License
+
+MIT, see [LICENSE](https://github.com/hubb/primetable/blob/master/LICENSE)
