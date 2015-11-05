@@ -4,4 +4,4 @@ require_relative '../lib/primetable'
 require 'primetable/options'
 
 options = Primetable::Options.parse(ARGV)
-Primetable.render(options.count)
+Primetable.render(options.count, options.operator)

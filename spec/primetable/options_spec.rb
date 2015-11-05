@@ -16,4 +16,15 @@ describe Primetable::Options do
       expect(options.count).to eq(5)
     end
   end
+
+  describe 'operator' do
+    it 'default to multiply' do
+      expect(options.operator).to eq('multiply')
+    end
+
+    it 'can be set' do
+      options = described_class.parse(['-o', 'add'])
+      expect(options.operator).to eq('add')
+    end
+  end
 end
