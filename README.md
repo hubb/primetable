@@ -1,4 +1,4 @@
-## Primetable
+## Primetable [![Build Status](https://travis-ci.org/hubb/primetable.svg?branch=master)](https://travis-ci.org/hubb/primetable)
 
 Write a program that prints out a multiplication table of the first 10 prime numbers.
 The program must run from the command line and print to screen one table.
