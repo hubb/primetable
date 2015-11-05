@@ -2,11 +2,9 @@ source 'https://rubygems.org'
 
 ruby '2.2.2'
 
-group :test do
-  gem "rspec", "~> 3.1.0"
-end
+gemspec
 
-group :development do
+group :local do
   gem "pry"
   gem "guard"
   gem "guard-rspec"
