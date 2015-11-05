@@ -6,9 +6,13 @@ Across the top and down the left side should be the 10 primes, and the body of t
 
 ### Usage
 
-Primetable displays 10 elements by default.
-
 ```
+Usage: primetable [options]
+    -c, --count COUNT                Specify COUNT of prime numbers to use
+    -o, --operator OPERATOR          Specify an OPERATOR to build the grid (add|multiply)
+    -s, --seq SEQUENCE               Specify a SEQUENCE generator (prime|fib)
+
+# Table of the product of the first 10 primes
 % ./bin/primetable
      |  2   3   5   7   11  13  17  19  23  29
 ----+----------------------------------------
@@ -22,9 +26,27 @@ Primetable displays 10 elements by default.
  19  |  38  57  95 133 209 247 323 361 437 551
  23  |  46  69 115 161 253 299 391 437 529 667
  29  |  58  87 145 203 319 377 493 551 667 841
-```
 
-You can specify the desirect count of rows/columns to use with the -c (--count) switch
+# Table of the sum of the first 5 primes
+% ./bin/primetable -operator add --count 5
+     |  2   3   5   7   11
+----+--------------------
+ 2   |  4   6   10  14  22
+ 3   |  6   9   15  21  33
+ 5   |  10  15  25  35  55
+ 7   |  14  21  35  49  77
+ 11  |  22  33  55  77 121
+
+# Table of the sum of the first 5 fibonacci
+% ./bin/primetable --seq fib --count 5 --operator add
+   |  1  1  2  3  5
+---+---------------
+ 1 |  2  2  3  4  6
+ 1 |  2  2  3  4  6
+ 2 |  3  3  4  5  7
+ 3 |  4  4  5  6  8
+ 5 |  6  6  7  8 10
+```
 
 ### Development
 
