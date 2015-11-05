@@ -10,6 +10,7 @@ module Primetable
         opts.banner      = "Usage: primetable [options]"
         options.count    = 10
         options.operator = 'multiply'
+        options.sequence = 'prime'
 
         opts.on("-c", "--count COUNT",
           "Specify COUNT of prime numbers to use") do |o|
@@ -21,6 +22,12 @@ module Primetable
           "Specify an OPERATOR to build the grid (add|multiply)") do |o|
 
           options.operator = o
+        end
+
+        opts.on("-s", "--seq SEQUENCE",
+          "Specify a SEQUENCE generator (prime|fib)") do |o|
+
+          options.sequence = o
         end
       end
 

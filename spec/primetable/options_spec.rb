@@ -27,4 +27,15 @@ describe Primetable::Options do
       expect(options.operator).to eq('add')
     end
   end
+
+  describe 'sequence' do
+    it 'default to multiply' do
+      expect(options.sequence).to eq('prime')
+    end
+
+    it 'can be set' do
+      options = described_class.parse(['-s', 'fib'])
+      expect(options.sequence).to eq('fib')
+    end
+  end
 end

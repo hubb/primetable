@@ -1,9 +1,14 @@
+require 'forwardable'
+
 module Primetable
-  class Generator
+  class PrimeGenerator
     POSSIBLE_LAST_CHARS = ['1','3','7','9']
+    extend Forwardable
+    
+    def_delegators :each, :take
 
     def self.take(count)
-      new.each.take(count)
+      new.take(count)
     end
 
     def each

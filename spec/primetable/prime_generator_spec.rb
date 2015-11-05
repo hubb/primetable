@@ -1,7 +1,7 @@
 require 'spec_helper'
-require 'primetable/generator'
+require 'primetable/prime_generator'
 
-describe Primetable::Generator do
+describe Primetable::PrimeGenerator do
   it { is_expected.to respond_to(:each) }
   it { expect(described_class).to respond_to(:take) }
 
